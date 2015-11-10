@@ -1,0 +1,19 @@
+Seo-proxy use this fields:
+
+-seo_url
+-seo_h1
+-seo_text
+-seo_description
+-seo_title
+
+Instruction: install seo-proxy:
+
+1) Install table to database (migration.sql)
+2) Add seo-proxy folder to root directory of your project
+3) Include seo-proxy/index.php in front controller
+4) Add SEO rules to database
+- project_name.com/?seo_proxy_action=list
+5) Example for use H1 proxy field in project:
+<h1>
+    <?= SeoProxy::get( 'seo_h1', $real_h1 ) ?>
+</h1>

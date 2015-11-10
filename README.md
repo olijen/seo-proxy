@@ -1,2 +1,0 @@
-# seo-proxy
-Seo proxy

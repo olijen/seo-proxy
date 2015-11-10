@@ -1,15 +1,11 @@
- -- DROP DATABASE IF EXISTS <<database>>;
- -- CREATE DATABASE IF NOT EXISTS <<database>>;
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `fio` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `status` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Defoult table for User entity (by olijen framework)' AUTO_INCREMENT=14 ;
-
- -- INSERT INTO `users` (`id`, `username`, `password`, `email`, `fio`, `status`) VALUES
- -- (1, 'admin', 'b59c67bf196a4758191e42f76670ceba', 'olijenius@gmail.com', '', 'admin');
+ CREATE TABLE IF NOT EXISTS `seo_proxy` (
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+   `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `seo_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `seo_h1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   `seo_text` text COLLATE utf8_unicode_ci NOT NULL,
+   `seo_description` text COLLATE utf8_unicode_ci NOT NULL,
+   `seo_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Defoult table for SeoProxy class (by olijen)'  AUTO_INCREMENT=3 ;
